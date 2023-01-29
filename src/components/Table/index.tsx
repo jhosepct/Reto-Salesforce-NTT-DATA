@@ -4,6 +4,7 @@ import { THeader } from "./Header";
 import TRow from "./Row";
 import { TableStyle } from "./style";
 
+import uuid from 'react-uuid';
 interface TableProps {
     dataHeader: DataHeader[], dataBody: DataBody[]
 }
@@ -23,9 +24,9 @@ const Table = ({ dataHeader, dataBody }: TableProps) => {
             </thead>
             <tbody>
                 {dataBody.map((row, index) => (
-                    <TRow>
+                    <TRow key={index}>
                         {dataHeader.map((column) => (
-                            <TCell key={column.id} align={column.align} headers={column.id} bgColor={(index + 1) % 2 == 0 ? '#d9e1f2' : '#b4c6e7'}>
+                            <TCell key={uuid()} align={column.align} headers={column.id} bgColor={(index + 1) % 2 === 0 ? '#d9e1f2' : '#b4c6e7'}>
                                 {row[column.id]}
                             </TCell>
                         ))}
