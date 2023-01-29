@@ -55,25 +55,25 @@ const dataHeader: DataHeader[] = [
     }
 ]
 
-
+// Data fakers
 const dataBody: DataBody[] = [
     {
-        name: 'Elsie',
-        lastname: 'Fields',
+        name: 'Victoria',
+        lastname: 'Pérez',
         age: 27,
         gender: 'F',
-        email: 'elsie.fields@example.com',
-        nationality: 'US',
-        photo: ''
+        email: 'victoria.perez@example.com',
+        nationality: 'ES',
+        photo: 'https://randomuser.me/api/portraits/women/72.jpg'
     },
     {
-        name: 'Elsie 2',
-        lastname: 'Fields 2',
-        age: 27,
+        name: 'Amanda',
+        lastname: 'Wallo',
+        age: 72,
         gender: 'F',
-        email: 'elsie.fields@example.com',
-        nationality: 'US',
-        photo: ''
+        email: 'amanda.wallo@example.com',
+        nationality: 'FI',
+        photo: 'https://randomuser.me/api/portraits/women/5.jpg'
     }
 ]
 
