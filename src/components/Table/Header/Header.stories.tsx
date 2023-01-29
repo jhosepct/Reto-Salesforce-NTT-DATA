@@ -3,7 +3,7 @@ import { THeader } from '.';
 
 
 export default {
-    title: 'Table/Header',
+    title: 'Components/Table/Header',
     component: THeader,
     argTypes: {
         bgColor: { control: 'color' },

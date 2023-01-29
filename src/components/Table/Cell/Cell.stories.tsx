@@ -3,7 +3,7 @@ import { TCell } from ".";
 
 
 export default {
-    title: 'Table/Cell',
+    title: 'Components/Table/Cell',
     component: TCell,
     argTypes: {
         bgColor: { control: 'color' },

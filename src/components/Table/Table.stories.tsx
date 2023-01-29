@@ -2,7 +2,7 @@ import { DataBody } from '../../App';
 import Table from './index'
 
 export default {
-    title: 'Table',
+    title: 'Components/Table',
     component: Table,
 }
 
@@ -55,9 +55,6 @@ const dataHeader: DataHeader[] = [
     }
 ]
 
-const getKeyValue = <U extends keyof T, T extends object>(key: U) => (obj: T) =>
-    obj[key];
-
 
 const dataBody: DataBody[] = [
     {
@@ -79,11 +76,6 @@ const dataBody: DataBody[] = [
         photo: ''
     }
 ]
-
-const keyOf = (key: string) => {
-    return key as keyof DataBody;
-}
-
 
 export const Primary = () => {
     return (
