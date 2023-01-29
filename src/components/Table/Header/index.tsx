@@ -1,28 +1,5 @@
+import { PropsHeader } from "../../../utils/interfaces/components";
 import { HeaderStyle } from "./styles"
-
-// Props for Header
-export interface PropsHeader {
-    /**
-   * Header content
-   */
-    children?: string | JSX.Element | JSX.Element[];
-    /**
-   * Width of the header
-   */
-    width?: string;
-    /**
-   * What background color to use
-   */
-    bgColor?: string;
-    /**
-   * What text color to use
-   */
-    color?: string;
-    /**
-   * What position should the text have?
-   */
-    align?: 'left' | 'center' | 'right';
-}
 
 export const THeader = ({
     // Default values
