@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { PropsHeader } from ".";
+import { PropsHeader } from "../../../utils/interfaces/components";
 
 export const HeaderStyle = styled.th<PropsHeader>`
     background-color: ${props => props.bgColor};
