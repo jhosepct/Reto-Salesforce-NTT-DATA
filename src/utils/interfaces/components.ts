@@ -54,3 +54,11 @@ export interface PropsHeader {
     align?: 'left' | 'center' | 'right';
 
 }
+
+export interface PropsImage {
+    /**
+     * The image source
+     *  
+    */
+    src?: string;
+}
