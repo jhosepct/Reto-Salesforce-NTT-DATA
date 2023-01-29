@@ -1,27 +1,40 @@
 import { HeaderStyle } from "./styles"
 
 // Props for Header
-export type PropsHeader = {
-    children: string | JSX.Element | JSX.Element[]
-    width: string
-    bgColor: string
-    color: string
+export interface PropsHeader {
+    /**
+   * Header content
+   */
+    children?: string | JSX.Element | JSX.Element[];
+    /**
+   * Width of the header
+   */
+    width?: string;
+    /**
+   * What background color to use
+   */
+    bgColor?: string;
+    /**
+   * What text color to use
+   */
+    color?: string;
+    /**
+   * What position should the text have?
+   */
+    align?: 'left' | 'center' | 'right';
 }
 
-const THeader = ({ children, width, bgColor, color }: PropsHeader) => {
+export const THeader = ({
+    // Default values
+    children,
+    width = 'auto',
+    bgColor = '#4472c4',
+    color = '#ffffff',
+    align = 'center'
+}: PropsHeader) => {
 
-    const props = { width: width, bgColor: bgColor, color: color }
+    // Props for HeaderStyle
+    const props = { width: width, bgColor: bgColor, color: color, align: align }
 
     return <HeaderStyle {...props}>{children}</HeaderStyle>
-}
-
-
-// Default props
-THeader.defaultProps = {
-    width: 'auto',
-    bgColor: '#4472c4',
-    color: '#ffffff'
-}
-
-
-export default THeader
+};
