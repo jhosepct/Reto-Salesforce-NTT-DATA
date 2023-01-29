@@ -27,6 +27,11 @@ export interface PropsCell {
      * @param {string[]} headers - The headers of the table
      */
     headers?: string | (string[] & string);
+    /**
+     *  What type of cell is it?
+     *
+     */
+    type?: string;
 
 }
 
