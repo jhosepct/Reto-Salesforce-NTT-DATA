@@ -1,27 +1,5 @@
+import { PropsCell } from "../../../utils/interfaces/components";
 import { CellStyle } from "./styles";
-
-export interface PropsHeader {
-  /**
- * Header content
- */
-  children?: string | JSX.Element | JSX.Element[];
-  /**
- * Width of the header
- */
-  width?: string;
-  /**
- * What background color to use
- */
-  bgColor?: string;
-  /**
- * What text color to use
- */
-  color?: string;
-  /**
- * What position should the text have?
- */
-  align?: 'left' | 'center' | 'right';
-}
 
 export const TCell = ({
   // Default values
@@ -30,7 +8,7 @@ export const TCell = ({
   bgColor = '#b4c6e7',
   color = '#000000',
   align = 'center'
-}: PropsHeader) => {
+}: PropsCell) => {
 
   // Props for HeaderStyle
   const props = { width: width, bgColor: bgColor, color: color, align: align }
