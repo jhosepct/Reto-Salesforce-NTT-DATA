@@ -1,34 +1,58 @@
 import TCell from "./Cell";
-import THeader from "./Header";
+import { THeader } from "./Header";
 import TRow from "./Row";
 import { TableStyle } from "./style";
+
+interface DataHeader {
+    name: string;
+    width: string;
+    align?: 'left' | 'center' | 'right';
+}
+
+const dataHeader: DataHeader[] = [
+    {
+        name: 'Nombre',
+        width: '200px',
+        align: 'left'
+    },
+    {
+        name: 'Apellido',
+        width: '200px',
+        align: 'left'
+    },
+    {
+        name: 'Edad',
+        width: '200px',
+    },
+    {
+        name: 'Genero',
+        width: '200px',
+    },
+    {
+        name: 'Email',
+        width: '600px',
+        align: 'left'
+    },
+    {
+        name: 'Nacionalidad',
+        width: '200px',
+    },
+    {
+        name: 'Foto',
+        width: '200px',
+    }
+]
 
 const Table = () => {
     return (
         <TableStyle>
             <thead>
                 <TRow>
-                    <THeader>
-                        Nombre
-                    </THeader>
-                    <THeader>
-                        Apellido
-                    </THeader>
-                    <THeader>
-                        Edad
-                    </THeader>
-                    <THeader>
-                        Genero
-                    </THeader>
-                    <THeader>
-                        Email
-                    </THeader>
-                    <THeader>
-                        Nacionalidad
-                    </THeader>
-                    <THeader>
-                        Foto
-                    </THeader>
+                    {dataHeader.map((item, index) => (
+                        <THeader key={index} width={item.width} align={item.align}>
+                            {item.name}
+                        </THeader>
+                    ))}
                 </TRow>
             </thead>
             <tbody>
