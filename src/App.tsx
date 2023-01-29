@@ -1,8 +1,12 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 
 import { createData } from "./utils/data";
 import Table from "./components/Table";
+
+import { CSVLink } from "react-csv";
+
+import axios from "axios";
+import { Button } from "./components/Button";
 
 interface photo extends Record<string, any> {
   large: string;
@@ -88,6 +92,10 @@ const App = () => {
   }, [data]);
   return (
     <div>
+      <CSVLink data={newData} separator={";"} filename="datosApi.csv">
+        <Button label="Exportara CSV" primary />
+      </CSVLink>
+
       <Table dataHeader={dataHeader} dataBody={newData} />
     </div>
   )
