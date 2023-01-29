@@ -6,5 +6,10 @@ export const CellStyle = styled.td<PropsCell>`
     color: ${props => props.color};
     width: ${props => props.width};
     text-align: ${props => props.align};
-    padding: 16px 5px;
+    padding: 5px;
+`;
+
+export const StyleContainer = styled.div`
+    display: flex;
+    justify-content: center;
 `;
