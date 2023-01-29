@@ -22,6 +22,12 @@ export interface PropsCell {
    * What position should the text have?
    */
     align?: 'left' | 'center' | 'right';
+    /**
+     * What position should the text have?
+     * @param {string[]} headers - The headers of the table
+     */
+    headers?: string | (string[] & string);
+
 }
 
 // Props for the Header component
@@ -46,4 +52,5 @@ export interface PropsHeader {
    * What position should the text have?
    */
     align?: 'left' | 'center' | 'right';
+
 }
