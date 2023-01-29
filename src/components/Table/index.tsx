@@ -26,9 +26,14 @@ const Table = ({ dataHeader, dataBody }: TableProps) => {
                 {dataBody.map((row, index) => (
                     <TRow key={index}>
                         {dataHeader.map((column) => (
-                            <TCell key={uuid()} align={column.align} headers={column.id} bgColor={(index + 1) % 2 === 0 ? '#d9e1f2' : '#b4c6e7'}>
-                                {row[column.id]}
-                            </TCell>
+                            <TCell
+                                key={uuid()}
+                                align={column.align}
+                                headers={column.id}
+                                bgColor={(index + 1) % 2 === 0 ? '#d9e1f2' : '#b4c6e7'}
+                                children={row[column.id]}
+                                type={column.id}
+                            />
                         ))}
 
                     </TRow>
