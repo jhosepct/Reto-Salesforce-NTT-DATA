@@ -7,11 +7,12 @@ export const TCell = ({
   width = 'auto',
   bgColor = '#b4c6e7',
   color = '#000000',
-  align = 'center'
+  align = 'center',
+  headers = ''
 }: PropsCell) => {
 
   // Props for HeaderStyle
-  const props = { width: width, bgColor: bgColor, color: color, align: align }
+  const propsStyle = { width: width, bgColor: bgColor, color: color, align: align }
 
-  return <CellStyle {...props}>{children}</CellStyle>
+  return <CellStyle {...propsStyle} headers={headers}>{children}</CellStyle>
 };
