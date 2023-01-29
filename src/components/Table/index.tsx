@@ -1,14 +1,33 @@
 import TCell from "./Cell";
 import THeader from "./Header";
 import TRow from "./Row";
+import { TableStyle } from "./style";
 
 const Table = () => {
     return (
-        <table>
+        <TableStyle>
             <thead>
                 <TRow>
                     <THeader>
-                        a
+                        Nombre
+                    </THeader>
+                    <THeader>
+                        Apellido
+                    </THeader>
+                    <THeader>
+                        Edad
+                    </THeader>
+                    <THeader>
+                        Genero
+                    </THeader>
+                    <THeader>
+                        Email
+                    </THeader>
+                    <THeader>
+                        Nacionalidad
+                    </THeader>
+                    <THeader>
+                        Foto
                     </THeader>
                 </TRow>
             </thead>
@@ -17,9 +36,32 @@ const Table = () => {
                     <TCell>
                         b
                     </TCell>
+                    <TCell>
+                        b
+                    </TCell>
+                    <TCell>
+                        b
+                    </TCell>
+                    <TCell>
+                        b
+                    </TCell>
+                </TRow>
+                <TRow>
+                    <TCell>
+                        b
+                    </TCell>
+                    <TCell>
+                        b
+                    </TCell>
+                    <TCell>
+                        b
+                    </TCell>
+                    <TCell>
+                        b
+                    </TCell>
                 </TRow>
             </tbody>
-        </table>
+        </TableStyle>
     )
 }
 
