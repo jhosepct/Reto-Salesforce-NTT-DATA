@@ -17,7 +17,7 @@ export const THeader = ({
     sortable = false,
     sortType = '',
     handleClickSort,
-    type
+    id = '',
 }: PropsHeader) => {
     const [sort, setSort] = useState<'asc' | 'desc' | ''>(sortType);
 
@@ -28,10 +28,10 @@ export const THeader = ({
     const handleClick = () => {
         if (sort === '' || sort === 'desc') {
             setSort('asc');
-            handleClickSort?.('asc', type);
+            handleClickSort?.('asc', id);
         } else {
             setSort('desc')
-            handleClickSort?.('desc', type);
+            handleClickSort?.('desc', id);
         }
     }
 
@@ -39,7 +39,7 @@ export const THeader = ({
     const handleSort = (typeSort: 'asc' | 'desc' | '') => {
         setSort(typeSort);
         setMenu(false);
-        handleClickSort?.(typeSort, type);
+        handleClickSort?.(typeSort, id);
     }
 
     console.log()
