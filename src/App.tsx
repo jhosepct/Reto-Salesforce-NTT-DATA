@@ -30,7 +30,6 @@ export interface DataHeader {
   align?: 'left' | 'center' | 'right';
   id: string;
   sortable?: boolean;
-  type?: 'number' | 'string';
 }
 
 const dataHeader: DataHeader[] = [
@@ -40,7 +39,6 @@ const dataHeader: DataHeader[] = [
     align: 'left',
     id: 'name',
     sortable: true,
-    type: 'string'
   },
   {
     name: 'Apellido',
@@ -53,7 +51,6 @@ const dataHeader: DataHeader[] = [
     width: '200px',
     id: 'age',
     sortable: true,
-    type: 'number'
   },
   {
     name: 'Genero',
@@ -70,7 +67,6 @@ const dataHeader: DataHeader[] = [
     name: 'Nacionalidad',
     width: '200px',
     id: 'nationality',
-    type: 'string'
   },
   {
     name: 'Foto',
