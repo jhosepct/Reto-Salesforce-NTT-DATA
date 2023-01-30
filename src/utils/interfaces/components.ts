@@ -74,14 +74,14 @@ export interface PropsHeader {
      */
     handleClickSort?: HandleClickSort;
     /**
-     * What type of cell is it?
+     * Name of the column
      *  
      */
-    type?: 'number' | 'string';
+    id?: string;
 }
 
 interface HandleClickSort {
-    (sortType: 'asc' | 'desc' | '', type?: 'number' | 'string'): void;
+    (sortType: 'asc' | 'desc' | '', id: string): void;
 }
 
 // Props for the Image component
