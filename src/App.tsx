@@ -22,7 +22,6 @@ export interface DataBody extends Record<string, any> {
   email: string;
   nationality: string;
   photo: string;
-
 }
 
 export interface DataHeader {
@@ -31,6 +30,7 @@ export interface DataHeader {
   align?: 'left' | 'center' | 'right';
   id: string;
   sortable?: boolean;
+  type?: 'number' | 'string';
 }
 
 const dataHeader: DataHeader[] = [
@@ -39,34 +39,38 @@ const dataHeader: DataHeader[] = [
     width: '200px',
     align: 'left',
     id: 'name',
-    sortable: true
+    sortable: true,
+    type: 'string'
   },
   {
     name: 'Apellido',
     width: '200px',
     align: 'left',
-    id: 'lastname'
+    id: 'lastname',
   },
   {
     name: 'Edad',
     width: '200px',
-    id: 'age'
+    id: 'age',
+    sortable: true,
+    type: 'number'
   },
   {
     name: 'Genero',
     width: '200px',
-    id: 'gender'
+    id: 'gender',
   },
   {
     name: 'Email',
     width: '600px',
     align: 'left',
-    id: 'email'
+    id: 'email',
   },
   {
     name: 'Nacionalidad',
     width: '200px',
-    id: 'nationality'
+    id: 'nationality',
+    type: 'string'
   },
   {
     name: 'Foto',
