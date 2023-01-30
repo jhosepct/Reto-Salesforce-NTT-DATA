@@ -4,6 +4,9 @@ import { THeader } from "./Header";
 import TRow from "./Row";
 import { TableStyle } from "./style";
 
+import { useEffect, useState } from "react";
+
+
 import uuid from 'react-uuid';
 interface TableProps {
     dataHeader: DataHeader[], dataBody: DataBody[]
@@ -11,19 +14,60 @@ interface TableProps {
 
 
 const Table = ({ dataHeader, dataBody }: TableProps) => {
+
+    //const [columns, setColumns] = useState<DataHeader[]>(dataHeader);
+    const [rows, setRows] = useState<DataBody[]>(dataBody);
+
+    // test render data not rendered
+    console.log(rows);
+    console.log(dataBody);
+
+    useEffect(() => {
+        setRows(dataBody);
+    }, [])
+
+    const handleClickSort = (sort: 'asc' | 'desc' | '', column: string) => {
+        if (sort === 'asc') {
+            const sorted = [...dataBody].sort((a, b) => {
+                if (a[column] > b[column]) {
+                    return 1;
+                }
+                if (a[column] < b[column]) {
+                    return -1;
+                }
+                return 0;
+
+            })
+            setRows(sorted);
+        } else if (sort === 'desc') {
+            const sorted = [...dataBody].sort((a, b) => {
+                if (a[column] > b[column]) {
+                    return -1;
+                }
+                if (a[column] < b[column]) {
+                    return 1;
+                }
+                return 0;
+            })
+            setRows(sorted);
+        } else {
+            setRows(dataBody);
+        }
+    }
+
     return (
         <TableStyle>
             <thead>
                 <TRow>
                     {dataHeader.map((item) => (
-                        <THeader key={item.id} {...item}>
+                        <THeader key={item.id} {...item} handleClickSort={handleClickSort}>
                             {item.name}
                         </THeader>
                     ))}
                 </TRow>
             </thead>
             <tbody>
-                {dataBody.map((row, index) => (
+                {rows.map((row, index) => (
                     <TRow key={index}>
                         {dataHeader.map((column) => (
                             <TCell
