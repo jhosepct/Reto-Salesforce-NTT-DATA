@@ -68,7 +68,20 @@ export interface PropsHeader {
      * @param {string} type - The type of sort
      */
     sortType?: 'asc' | 'desc' | '';
+    /**
+     * What type of sort is it?
+     * 
+     */
+    handleClickSort?: HandleClickSort;
+    /**
+     * What type of cell is it?
+     *  
+     */
+    type?: 'number' | 'string';
+}
 
+interface HandleClickSort {
+    (sortType: 'asc' | 'desc' | '', type?: 'number' | 'string'): void;
 }
 
 // Props for the Image component
