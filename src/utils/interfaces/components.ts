@@ -57,6 +57,17 @@ export interface PropsHeader {
    * What position should the text have?
    */
     align?: 'left' | 'center' | 'right';
+    /**
+    * Sort the table by this column
+    * 
+    */
+    sortable?: boolean;
+    /**
+     * What type of sort is it?
+     * 
+     * @param {string} type - The type of sort
+     */
+    sortType?: 'asc' | 'desc' | '';
 
 }
 
