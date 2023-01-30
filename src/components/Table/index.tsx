@@ -14,17 +14,11 @@ interface TableProps {
 
 
 const Table = ({ dataHeader, dataBody }: TableProps) => {
-
-    //const [columns, setColumns] = useState<DataHeader[]>(dataHeader);
-    const [rows, setRows] = useState<DataBody[]>(dataBody);
-
-    // test render data not rendered
-    console.log(rows);
-    console.log(dataBody);
+    const [rows, setRows] = useState<DataBody[]>([]);
 
     useEffect(() => {
         setRows(dataBody);
-    }, [])
+    }, [dataBody])
 
     const handleClickSort = (sort: 'asc' | 'desc' | '', column: string) => {
         if (sort === 'asc') {
