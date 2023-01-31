@@ -1,11 +1,13 @@
 // Description: This file contains all the interfaces for the components
 
+import { PhotoData } from "../../App";
+
 // Props for the Cell component
 export interface PropsCell {
     /**
    * Header content
    */
-    children?: string | JSX.Element | JSX.Element[];
+    children?: string | JSX.Element | JSX.Element[] | Object;
     /**
    * Width of the header
    */
@@ -91,6 +93,12 @@ export interface PropsImage {
      *  
     */
     src?: string;
+    /**
+     * The image width
+     * 
+     * @param {string} width - The image width
+     */
+    width?: string;
 }
 
 // Props for the Button component
