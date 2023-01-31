@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { PropsCell } from "../../../utils/interfaces/components";
 import { Photo } from "../../Image";
 import { CellStyle, StyleContainer } from "./styles";
+import { PhotoData } from "../../../App";
 
 export const TCell = ({
   // Default values
@@ -13,11 +15,14 @@ export const TCell = ({
   headers = ''
 }: PropsCell) => {
 
+
+  const [sizeImage, setSizeImage] = useState<PhotoData>();
   // Props for HeaderStyle
   const propsStyle = { width: width, bgColor: bgColor, color: color, align: align }
-  const url = children?.toString();
 
   if (type === 'photo') {
+    const photoData = children as PhotoData;
+    const url = photoData?.large.toString();
     return (
       <CellStyle {...propsStyle} headers={headers}>
         <StyleContainer>
@@ -27,5 +32,5 @@ export const TCell = ({
     )
   }
 
-  return <CellStyle {...propsStyle} headers={headers}>{children}</CellStyle>
+  return <CellStyle {...propsStyle} headers={headers}>{children?.toString()}</CellStyle>
 };
