@@ -8,7 +8,7 @@ import { CSVLink } from "react-csv";
 import axios from "axios";
 import { Button } from "./components/Button";
 
-interface photo extends Record<string, any> {
+export interface PhotoData extends Record<string, any> {
   large: string;
   medium: string;
   thumbnail: string;
@@ -21,7 +21,7 @@ export interface DataBody extends Record<string, any> {
   gender: string;
   email: string;
   nationality: string;
-  photo: string;
+  photo: PhotoData;
 }
 
 export interface DataHeader {
