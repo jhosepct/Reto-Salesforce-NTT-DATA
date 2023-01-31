@@ -1,5 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { THeader } from '.';
+import { global, reset } from '../../../assets/global/global';
+import { Global } from '@emotion/react';
 
 
 export default {
@@ -12,7 +14,15 @@ export default {
     },
 } as ComponentMeta<typeof THeader>;
 
-const Template: ComponentStory<typeof THeader> = (args) => <THeader {...args} />;
+const Template: ComponentStory<typeof THeader> = (args) => (
+    <>
+        <Global styles={reset} />
+        <Global styles={global} />
+        <THeader {...args} />
+    </>
+)
+
+
 
 export const Primary = Template.bind({});
 
@@ -35,4 +45,11 @@ Left.args = {
     width: '200px',
     children: 'Text',
     align: 'left'
+};
+
+export const WithSort = Template.bind({});
+WithSort.args = {
+    width: '200px',
+    children: 'Text',
+    sortable: true
 };

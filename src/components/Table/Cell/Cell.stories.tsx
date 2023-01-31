@@ -1,5 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { TCell } from ".";
+import { global, reset } from "../../../assets/global/global";
+import { Global } from "@emotion/react";
 
 
 export default {
@@ -12,7 +14,14 @@ export default {
     },
 } as ComponentMeta<typeof TCell>;
 
-const Template: ComponentStory<typeof TCell> = (args) => <TCell {...args} />;
+const Template: ComponentStory<typeof TCell> = (args) => (
+
+    <>
+        <Global styles={reset} />
+        <Global styles={global} />
+        <TCell {...args} />
+    </>
+);
 
 export const Primary = Template.bind({});
 
