@@ -10,7 +10,6 @@ export default {
     argTypes: {
         bgColor: { control: 'color' },
         color: { control: 'color' },
-        align: { control: { type: 'select', options: ['left', 'center', 'right'] } }
     },
 } as ComponentMeta<typeof TCell>;
 

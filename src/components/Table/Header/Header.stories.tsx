@@ -10,7 +10,6 @@ export default {
     argTypes: {
         bgColor: { control: 'color' },
         color: { control: 'color' },
-        align: { control: { type: 'select', options: ['left', 'center', 'right'] } }
     },
 } as ComponentMeta<typeof THeader>;
 
@@ -51,5 +50,5 @@ export const WithSort = Template.bind({});
 WithSort.args = {
     width: '200px',
     children: 'Text',
-    sortable: true
+    sortable: true,
 };
