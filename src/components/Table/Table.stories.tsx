@@ -99,22 +99,30 @@ const dataHeaderWIthSort: DataHeader[] = [
 // Data fakers
 const dataBody: DataBody[] = [
     {
-        name: 'Victoria',
-        lastname: 'Pérez',
-        age: 27,
-        gender: 'F',
-        email: 'victoria.perez@example.com',
-        nationality: 'ES',
-        photo: 'https://randomuser.me/api/portraits/women/72.jpg'
+        name: 'Grimaldo',
+        lastname: 'Chavarría',
+        age: 31,
+        gender: 'M',
+        email: 'grimaldo.chavarria@example.com',
+        nationality: 'MX',
+        photo: {
+            large: "https://randomuser.me/api/portraits/women/44.jpg",
+            medium: "https://randomuser.me/api/portraits/med/women/44.jpg",
+            thumbnail: "https://randomuser.me/api/portraits/thumb/women/44.jpg"
+        },
     },
     {
-        name: 'Amanda',
-        lastname: 'Wallo',
-        age: 72,
+        name: 'Catalina',
+        lastname: 'Méndez',
+        age: 67,
         gender: 'F',
-        email: 'amanda.wallo@example.com',
-        nationality: 'FI',
-        photo: 'https://randomuser.me/api/portraits/women/5.jpg'
+        email: 'catalina.mendez@example.com',
+        nationality: 'ES',
+        photo: {
+            large: "https://randomuser.me/api/portraits/men/71.jpg",
+            medium: "https://randomuser.me/api/portraits/med/men/71.jpg",
+            thumbnail: "https://randomuser.me/api/portraits/thumb/men/71.jpg"
+        },
     }
 ]
 
