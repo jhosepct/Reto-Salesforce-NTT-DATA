@@ -1,9 +1,9 @@
 import { PropsImage } from "../../utils/interfaces/components"
 import { ImageStyle } from "./styles"
 
-export const Photo = ({ src = '' }: PropsImage) => {
+export const Photo = ({ src = '', ...props }: PropsImage) => {
     return (
-        <ImageStyle>
+        <ImageStyle {...props}>
             <img src={src} alt="photo" />
         </ImageStyle>
     )
