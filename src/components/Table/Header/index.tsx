@@ -5,8 +5,6 @@ import { HeaderStyle, MenuIcon, Wrapper } from "./styles"
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 
-import { DataBody } from '../../../App'
-
 export const THeader = ({
     // Default values
     children,
@@ -41,8 +39,6 @@ export const THeader = ({
         setMenu(false);
         handleClickSort?.(typeSort, id);
     }
-
-    console.log()
 
     // Props for HeaderStyle
     const props = { width: width, bgColor: bgColor, color: color, align: align, sortable: sortable, sortType: sort }
