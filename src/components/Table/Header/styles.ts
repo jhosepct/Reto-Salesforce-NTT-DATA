@@ -16,6 +16,10 @@ export const HeaderStyle = styled.th<PropsHeader>`
     padding: 5px;
     position: relative;
     z-index: 100;
+    .fisrt-child{
+        display:flex;
+        justify-content: ${props => props.align};
+    }
 
     ${({ sortType = '', ...props }) => props.sortable && sortable(sortType)}
 `;
