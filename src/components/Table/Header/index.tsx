@@ -15,6 +15,7 @@ export const THeader = ({
     sortable = false,
     sortType = '',
     handleClickSort,
+    handleClickPhoto,
     id = '',
 }: PropsHeader) => {
     const [sort, setSort] = useState<'asc' | 'desc' | ''>(sortType);
@@ -40,6 +41,12 @@ export const THeader = ({
         handleClickSort?.(typeSort, id);
     }
 
+    const handleChangePhoto = (typePhoto: 'thumbnail' | 'medium' | 'large', typeSort: 'asc' | 'desc' | '') => {
+        setSort(typeSort);
+        setMenu(false);
+        handleClickPhoto?.(typePhoto);
+    }
+
     // Props for HeaderStyle
     const props = { width: width, bgColor: bgColor, color: color, align: align, sortable: sortable, sortType: sort }
     if (sortable) {
@@ -58,6 +65,27 @@ export const THeader = ({
                             <li className={sort === "asc" ? "active" : ""} onClick={() => handleSort('asc')}>Sort by ASC</li>
                             <li className={sort === "desc" ? "active" : ""} onClick={() => handleSort('desc')}>Sort by DESC</li>
                             <li className={sort === "" ? "active" : ""} onClick={() => handleSort('')}>Unsort</li>
+                        </ul>
+                    </div>
+                </MenuIcon>
+            </Wrapper>
+        </HeaderStyle>
+    }
+    else if (id === 'photo') {
+        return <HeaderStyle {...props}  >
+            <Wrapper >
+                <div className="fisrt-child" >
+                    <p>
+                        {children}
+                    </p>
+                </div>
+                <MenuIcon {...propMenu} onClick={() => setMenu(!menu)}>
+                    <BsThreeDotsVertical />
+                    <div>
+                        <ul>
+                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleChangePhoto('thumbnail', 'asc')}>Thumbnail</li>
+                            <li className={sort === "desc" ? "active" : ""} onClick={() => handleChangePhoto('medium', 'desc')}>Medium</li>
+                            <li className={sort === "" ? "active" : ""} onClick={() => handleChangePhoto('large', '')}>Large</li>
                         </ul>
                     </div>
                 </MenuIcon>
