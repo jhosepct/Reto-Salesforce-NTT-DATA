@@ -15,6 +15,7 @@ interface TableProps {
 
 const Table = ({ dataHeader, dataBody }: TableProps) => {
     const [rows, setRows] = useState<DataBody[]>([]);
+    const [typePhoto, setTypePhoto] = useState<'thumbnail' | 'medium' | 'large'>('thumbnail');
 
     useEffect(() => {
         setRows(dataBody);
@@ -49,12 +50,16 @@ const Table = ({ dataHeader, dataBody }: TableProps) => {
         }
     }
 
+    const handleClickPhoto = (typePhoto: 'thumbnail' | 'medium' | 'large') => {
+        setTypePhoto(typePhoto);
+    }
+
     return (
         <TableStyle>
             <thead>
                 <TRow>
                     {dataHeader.map((item) => (
-                        <THeader key={item.id} {...item} handleClickSort={handleClickSort}>
+                        <THeader key={item.id} {...item} handleClickPhoto={handleClickPhoto} handleClickSort={handleClickSort} >
                             {item.name}
                         </THeader>
                     ))}
@@ -71,6 +76,7 @@ const Table = ({ dataHeader, dataBody }: TableProps) => {
                                 bgColor={(index + 1) % 2 === 0 ? '#d9e1f2' : '#b4c6e7'}
                                 children={row[column.id]}
                                 type={column.id}
+                                typePhoto={typePhoto}
                             />
                         ))}
 
