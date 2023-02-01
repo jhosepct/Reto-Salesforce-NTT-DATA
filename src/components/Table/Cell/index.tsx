@@ -12,21 +12,23 @@ export const TCell = ({
   bgColor = '#b4c6e7',
   color = '#000000',
   align = 'center',
-  headers = ''
+  headers = '',
+  typePhoto = 'thumbnail'
 }: PropsCell) => {
 
 
-  const [sizeImage, setSizeImage] = useState<PhotoData>();
+  const photoData = children as PhotoData;
+  const image = photoData?.[typePhoto];
+
+  const size = photoData?.thumbnail === image ? '48px' : photoData?.medium === image ? '60px' : '72px';
   // Props for HeaderStyle
   const propsStyle = { width: width, bgColor: bgColor, color: color, align: align }
 
   if (type === 'photo') {
-    const photoData = children as PhotoData;
-    const url = photoData?.large.toString();
     return (
       <CellStyle {...propsStyle} headers={headers}>
         <StyleContainer>
-          <Photo src={url} />
+          <Photo src={image} width={size} />
         </StyleContainer>
       </CellStyle>
     )
