@@ -2,9 +2,10 @@ import { Global } from '@emotion/react';
 import { DataBody, DataHeader } from '../../App';
 import Table from './index'
 import { global, reset } from '../../assets/global/global';
+import { ComponentStory } from '@storybook/react';
 
 export default {
-    title: 'Components/Table',
+    title: 'Components/Table/Table',
     component: Table,
 }
 
@@ -12,41 +13,34 @@ export default {
 const dataHeader: DataHeader[] = [
     {
         name: 'Nombre',
-        width: '200px',
         align: 'left',
-        id: 'name'
-
+        id: 'name',
     },
     {
         name: 'Apellido',
-        width: '200px',
         align: 'left',
-        id: 'lastname'
+        id: 'lastname',
     },
     {
         name: 'Edad',
-        width: '200px',
-        id: 'age'
+        id: 'age',
     },
     {
         name: 'Genero',
-        width: '200px',
-        id: 'gender'
+        id: 'gender',
     },
     {
         name: 'Email',
-        width: '600px',
         align: 'left',
-        id: 'email'
+        id: 'email',
     },
     {
         name: 'Nacionalidad',
-        width: '200px',
-        id: 'nationality'
+        id: 'nationality',
     },
     {
         name: 'Foto',
-        width: '200px',
+        width: '140px',
         id: 'photo'
     }
 ]
@@ -54,43 +48,36 @@ const dataHeader: DataHeader[] = [
 const dataHeaderWIthSort: DataHeader[] = [
     {
         name: 'Nombre',
-        width: '200px',
         align: 'left',
         id: 'name',
-        sortable: true
-
+        sortable: true,
     },
     {
         name: 'Apellido',
-        width: '200px',
         align: 'left',
-        id: 'lastname'
+        id: 'lastname',
     },
     {
         name: 'Edad',
-        width: '200px',
         id: 'age',
-        sortable: true
+        sortable: true,
     },
     {
         name: 'Genero',
-        width: '200px',
-        id: 'gender'
+        id: 'gender',
     },
     {
         name: 'Email',
-        width: '600px',
         align: 'left',
-        id: 'email'
+        id: 'email',
     },
     {
         name: 'Nacionalidad',
-        width: '200px',
-        id: 'nationality'
+        id: 'nationality',
     },
     {
         name: 'Foto',
-        width: '200px',
+        width: '140px',
         id: 'photo'
     }
 ]
@@ -126,26 +113,23 @@ const dataBody: DataBody[] = [
     }
 ]
 
-export const Primary = () => {
-    return (
-        <>
-            <Global styles={reset} />
-            <Global styles={global} />
-            <Table dataHeader={dataHeader} dataBody={dataBody} />
-        </>
-    )
+
+const Template: ComponentStory<typeof Table> = (args) => (
+    <>
+        <Global styles={reset} />
+        <Global styles={global} />
+        <Table {...args} />
+    </>
+)
+
+export const Default = Template.bind({})
+Default.args = {
+    dataHeader,
+    dataBody,
 }
 
-Primary.storyName = 'Default';
-
-export const WithSort = () => {
-    return (
-        <>
-            <Global styles={reset} />
-            <Global styles={global} />
-            <Table dataHeader={dataHeaderWIthSort} dataBody={dataBody} />
-        </>
-    )
+export const WithSort = Template.bind({})
+WithSort.args = {
+    dataHeader: dataHeaderWIthSort,
+    dataBody,
 }
-
-WithSort.storyName = 'Table With Sort';
