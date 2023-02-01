@@ -1,12 +1,12 @@
-import { DataBody, DataHeader } from "../../App";
-import { TableProps } from "../../utils/interfaces/components";
+import { useEffect, useState } from "react";
 import { TCell } from "./Cell";
 import { THeader } from "./Header";
 import TRow from "./Row";
+
 import { TableStyle } from "./style";
 
-import { useEffect, useState } from "react";
-
+import { TableProps } from "../../utils/interfaces/components";
+import { DataBody } from "../../utils/interfaces/data";
 
 import uuid from 'react-uuid';
 

@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { PropsCell } from "../../../utils/interfaces/components";
 import { Photo } from "../../Image";
 import { CellStyle, StyleContainer } from "./styles";
-import { PhotoData } from "../../../App";
+
+import { PropsCell } from "../../../utils/interfaces/components";
+import { PhotoData } from "../../../utils/interfaces/data";
 
 export const TCell = ({
   // Default values

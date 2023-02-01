@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { PropsHeader } from "../../../utils/interfaces/components";
 import { HeaderStyle, MenuIcon, Wrapper } from "./styles"
+
+import { PropsHeader } from "../../../utils/interfaces/components";
 
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineCaretDown } from 'react-icons/ai';

@@ -1,8 +1,10 @@
-import { Global } from '@emotion/react';
-import { DataBody, DataHeader } from '../../App';
-import Table from './index'
-import { global, reset } from '../../assets/global/global';
 import { ComponentStory } from '@storybook/react';
+import { Global } from '@emotion/react';
+
+import Table from './index'
+
+import { global, reset } from '../../assets/global/global';
+import { DataBody, DataHeader } from '../../utils/interfaces/data';
 
 export default {
     title: 'Components/Table/Table',

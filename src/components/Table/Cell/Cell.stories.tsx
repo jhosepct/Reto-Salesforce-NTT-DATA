@@ -1,7 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { TCell } from ".";
-import { global, reset } from "../../../assets/global/global";
 import { Global } from "@emotion/react";
+
+import { TCell } from ".";
+
+import { global, reset } from "../../../assets/global/global";
 
 
 export default {
