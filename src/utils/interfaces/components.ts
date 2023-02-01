@@ -34,6 +34,11 @@ export interface PropsCell {
      *
      */
     type?: string;
+    /**
+     * What type of photo is it?
+     * 
+     */
+    typePhoto?: 'thumbnail' | 'medium' | 'large';
 
 }
 
@@ -80,10 +85,20 @@ export interface PropsHeader {
      *  
      */
     id?: string;
+    /**
+     * Change size of the photo
+     * 
+     * @param {string} size - The size of the photo
+     */
+    handleClickPhoto?: HandleClickPhoto;
 }
 
 interface HandleClickSort {
     (sortType: 'asc' | 'desc' | '', id: string): void;
+}
+
+interface HandleClickPhoto {
+    (typePhoto: 'thumbnail' | 'medium' | 'large'): void;
 }
 
 // Props for the Image component
