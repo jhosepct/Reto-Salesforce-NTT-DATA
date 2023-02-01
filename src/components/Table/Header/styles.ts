@@ -92,6 +92,10 @@ export const MenuIcon = styled.div<PropsMenu>`
         background: white;
         color: black;
         z-index: 150;
+
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
     }
     & ul{
         list-style: none;
