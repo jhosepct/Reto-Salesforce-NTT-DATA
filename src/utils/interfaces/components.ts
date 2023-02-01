@@ -1,6 +1,6 @@
 // Description: This file contains all the interfaces for the components
 
-import { DataBody, DataHeader, PhotoData } from "../../App";
+import { DataBody, DataHeader } from "./data";
 
 // Props for the Cell component
 export interface PropsCell {
