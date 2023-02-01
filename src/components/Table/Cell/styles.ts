@@ -13,5 +13,5 @@ export const StyleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 72px;
 `;
