@@ -1,73 +1,17 @@
 import { useEffect, useState } from "react";
 
-import { createData } from "./utils/data";
+import { createData, dataHeader } from "./utils/data/data";
 import Table from "./components/Table";
 
 import { CSVLink } from "react-csv";
 
 import axios from "axios";
 import { Button } from "./components/Button";
+import { DataBody } from "./utils/interfaces/data";
 
-export interface PhotoData extends Record<string, any> {
-  large: string;
-  medium: string;
-  thumbnail: string;
-}
 
-export interface DataBody extends Record<string, any> {
-  name: string;
-  lastname: string;
-  age: number;
-  gender: string;
-  email: string;
-  nationality: string;
-  photo: PhotoData;
-}
 
-export interface DataHeader {
-  name: string;
-  width?: string;
-  align?: 'left' | 'center' | 'right';
-  id: string;
-  sortable?: boolean;
-}
 
-const dataHeader: DataHeader[] = [
-  {
-    name: 'Nombre',
-    align: 'left',
-    id: 'name',
-    sortable: true,
-  },
-  {
-    name: 'Apellido',
-    align: 'left',
-    id: 'lastname',
-  },
-  {
-    name: 'Edad',
-    id: 'age',
-    sortable: true,
-  },
-  {
-    name: 'Genero',
-    id: 'gender',
-  },
-  {
-    name: 'Email',
-    align: 'left',
-    id: 'email',
-  },
-  {
-    name: 'Nacionalidad',
-    id: 'nationality',
-  },
-  {
-    name: 'Foto',
-    width: '140px',
-    id: 'photo'
-  }
-]
 
 const App = () => {
   const [data, setData] = useState([]);
