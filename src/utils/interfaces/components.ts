@@ -1,6 +1,6 @@
 // Description: This file contains all the interfaces for the components
 
-import { PhotoData } from "../../App";
+import { DataBody, DataHeader, PhotoData } from "../../App";
 
 // Props for the Cell component
 export interface PropsCell {
@@ -138,4 +138,15 @@ export interface ButtonProps {
      * Optional click handler
      */
     onClick?: () => void;
+}
+
+export interface TableProps {
+    /**
+     * The headers of the table
+     */
+    dataHeader: DataHeader[],
+    /**
+     * The body of the table
+     */
+    dataBody: DataBody[]
 }
