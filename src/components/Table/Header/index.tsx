@@ -83,9 +83,9 @@ export const THeader = ({
                     <BsThreeDotsVertical />
                     <div>
                         <ul>
-                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleChangePhoto('thumbnail', 'asc')}>Thumbnail</li>
+                            <li className={sort === "" ? "active" : ""} onClick={() => handleChangePhoto('thumbnail', '')}>Thumbnail</li>
                             <li className={sort === "desc" ? "active" : ""} onClick={() => handleChangePhoto('medium', 'desc')}>Medium</li>
-                            <li className={sort === "" ? "active" : ""} onClick={() => handleChangePhoto('large', '')}>Large</li>
+                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleChangePhoto('large', 'asc')}>Large</li>
                         </ul>
                     </div>
                 </MenuIcon>
