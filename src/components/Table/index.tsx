@@ -1,4 +1,5 @@
 import { DataBody, DataHeader } from "../../App";
+import { TableProps } from "../../utils/interfaces/components";
 import { TCell } from "./Cell";
 import { THeader } from "./Header";
 import TRow from "./Row";
@@ -8,12 +9,10 @@ import { useEffect, useState } from "react";
 
 
 import uuid from 'react-uuid';
-interface TableProps {
-    dataHeader: DataHeader[], dataBody: DataBody[]
-}
 
 
-const Table = ({ dataHeader, dataBody }: TableProps) => {
+
+const Table = ({ dataHeader = [], dataBody = [] }: TableProps) => {
     const [rows, setRows] = useState<DataBody[]>([]);
     const [typePhoto, setTypePhoto] = useState<'thumbnail' | 'medium' | 'large'>('thumbnail');
 
