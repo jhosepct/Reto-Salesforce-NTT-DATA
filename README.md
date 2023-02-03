@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jhosepct/Reto-Salesforce-NTT-DATA/blob/main/logo.webp">
+    <img width="33%" alt="NTT DATA" src="https://github.com/jhosepct/Reto-Salesforce-NTT-DATA/blob/main/logo.webp"> 
+  </picture>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Paquetes usados:
 
-In the project directory, you can run:
+- storybook: [link](https://storybook.js.org/)
+- emotion: [link](https://emotion.sh/docs/introduction)
+- react-icons: [link](https://react-icons.github.io/react-icons/)
+- react-csv: [link](https://www.npmjs.com/package/react-csv)
+- axios: [link](https://axios-http.com/)
+- uuidv4: [link](https://github.com/thenativeweb/uuidv4)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instalación
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Asegúrese de que sus versiones de NodeJS y npm estén actualizadas para `React ^18.2.0`
 
-### `npm test`
+- Instalar dependencias: `npm` or `yarn`
+  Una pequeña introducción sobre la instalación.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ npm run install
+```
 
-### `npm run build`
+- Inicie el servidor: `npm run start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Las vistas están en: `localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Storybook
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Storybook es una librería de código abierto que permite desarrollar y documentar tus componentes en un entorno aislado.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para poder ver los componentes listos para usar, podes entrar a [este enlace][] (_provisorio_).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para poder usar localmente debes realizar lo siguiente:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Inicie storybook: `npm run storybook`
 
-## Learn More
+```
+$ npm run storybook
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Las vistas están en: `localhost:6006
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copyright © [Jhosep Ct](https://github.com/jhosepct)
