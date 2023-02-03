@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 export const WrapperTable = styled.div`
     max-height: 450px;
     overflow-x: auto;
+    padding: 0 0 0 35px;
     scrollbar-width: thin;    
     thead{
         position: sticky;
