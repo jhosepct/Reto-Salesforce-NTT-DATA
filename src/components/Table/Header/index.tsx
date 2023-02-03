@@ -63,9 +63,9 @@ export const THeader = ({
                     <BsThreeDotsVertical />
                     <div>
                         <ul>
-                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleSort('asc')}>Sort by ASC</li>
-                            <li className={sort === "desc" ? "active" : ""} onClick={() => handleSort('desc')}>Sort by DESC</li>
-                            <li className={sort === "" ? "active" : ""} onClick={() => handleSort('')}>Unsort</li>
+                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleSort('asc')}>Ordenar por ASC</li>
+                            <li className={sort === "desc" ? "active" : ""} onClick={() => handleSort('desc')}>Ordenar por DESC</li>
+                            <li className={sort === "" ? "active" : ""} onClick={() => handleSort('')}>Desordenar</li>
                         </ul>
                     </div>
                 </MenuIcon>
@@ -84,9 +84,9 @@ export const THeader = ({
                     <BsThreeDotsVertical />
                     <div>
                         <ul>
-                            <li className={sort === "" ? "active" : ""} onClick={() => handleChangePhoto('thumbnail', '')}>Thumbnail</li>
-                            <li className={sort === "desc" ? "active" : ""} onClick={() => handleChangePhoto('medium', 'desc')}>Medium</li>
-                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleChangePhoto('large', 'asc')}>Large</li>
+                            <li className={sort === "" ? "active" : ""} onClick={() => handleChangePhoto('thumbnail', '')}>Miniatura</li>
+                            <li className={sort === "desc" ? "active" : ""} onClick={() => handleChangePhoto('medium', 'desc')}>Mediano</li>
+                            <li className={sort === "asc" ? "active" : ""} onClick={() => handleChangePhoto('large', 'asc')}>Largo</li>
                         </ul>
                     </div>
                 </MenuIcon>
