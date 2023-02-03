@@ -5,6 +5,8 @@
   </picture>
 </h1>
 
+La aplicación permite visualizar en una tabla los 15 datos de una [api](https://randomuser.me/documentation), poder ordenar(ascendente, desendente y desordenada), visualizar las imagenes en los tres tipos de imagen que proporsiona(miniatura, mediano y largo) y por ultimo exportar la data en formato csv.
+
 - Demo: [NTT DATA](https://reto-salesforce-ntt-data.vercel.app/)
 
 ---
@@ -56,5 +58,13 @@ $ npm run storybook
 ```
 
 - Las vistas están en: `localhost:6006
+
+### API
+
+Obtener 15 usuarios
+
+```
+    GET https://randomuser.me/api/?results=15
+```
 
 Copyright © [Jhosep Ct](https://github.com/jhosepct)
