@@ -5,7 +5,7 @@
   </picture>
 </h1>
 
-La aplicación permite visualizar en una tabla los 15 datos de una [api](https://randomuser.me/documentation), poder ordenar(ascendente, desendente y desordenada), visualizar las imagenes en los tres tipos de imagen que proporsiona(miniatura, mediano y largo) y por ultimo exportar la data en formato csv.
+La aplicación permite visualizar en una tabla los 15 datos de una [api](https://randomuser.me/documentation), poder ordenar(ascendente, descendente y desordenada), visualizar las imagenes en los tres tipos que proporsiona(miniatura, mediano y largo) y por ultimo exportar la data en formato csv.
 
 - Demo: [NTT DATA](https://reto-salesforce-ntt-data.vercel.app/)
 
