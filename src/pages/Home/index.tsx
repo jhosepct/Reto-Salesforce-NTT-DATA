@@ -16,7 +16,7 @@ export const Home = () => {
     const [dataExport, setDataExport] = useState<DataBody[]>([]);
     const baseUrl = "https://randomuser.me/api/?";
     useEffect(() => {
-        axios.get(`${baseUrl}results=10`).then((res) => {
+        axios.get(`${baseUrl}results=15`).then((res) => {
             setData(res.data.results);
         });
     }, []);
