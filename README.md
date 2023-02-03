@@ -45,7 +45,7 @@ $ npm run start
 
 Storybook es una librería de código abierto que permite desarrollar y documentar tus componentes en un entorno aislado.
 
-Para poder ver los componentes listos para usar, podes entrar a [este enlace][https://reto-salesforce-ntt-data-jssu.vercel.app/] (_provisorio_).
+Para poder ver los componentes listos para usar, podes entrar a [este enlace](https://reto-salesforce-ntt-data-jssu.vercel.app/) (_provisorio_).
 
 Para poder usar localmente debes realizar lo siguiente:
 
